@@ -1,0 +1,46 @@
+@media screen and (max-width: 900px) {
+    .infoBar {
+        padding: 8px 0px;
+        .infoBar_inner {
+            grid-template-columns: repeat(2, auto);
+            position: relative;
+            grid-column-gap: 10px;
+            div {
+                &:nth-of-type(1) {
+                    display: none;
+                }
+                &:nth-of-type(2) {
+                    p {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 460px) {
+    .infoBar {
+        .infoBar_inner {
+            div {
+                &:nth-of-type(2) {
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 390px) {
+    .infoBar {
+        .infoBar_inner {
+            div {
+                &:nth-of-type(2) {
+                    p {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@media screen and (max-width: 1285px) {
+    .hero {
+        .hero_inner {
+            .hero_content {
+                .info {
+                    h1 {
+                        font-size: 55px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1176px) {
+    .hero {
+        .hero_inner {
+            .hero_content {
+                .info {
+                    h1 {
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1071px) {
+    .hero {
+        .hero_inner {
+            grid-template-columns: 1fr;
+            place-items: center;
+
+            .hero_content {
+                .supTitle {
+                    margin: 20px auto;
+                }
+                .info {
+                    text-align: center;
+                    h1 {
+                        font-size: 45px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                .buttons {
+                    justify-content: center;
+                }
+                .statistics {
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+            .hero_swiper {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .hero {
+        .hero_inner {
+            .hero_content {
+                .info {
+                    h1 {
+                        font-size: 35px;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+                .statistics {
+                    grid-column-gap: 20px;
+                    div {
+                        h5 {
+                            font-size: 20px;
+                        }
+                        &:nth-of-type(2) {
+                            border-left: 2px solid #d6d6d6;
+                            border-right: 2px solid #d6d6d6;
+                            padding: 0px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

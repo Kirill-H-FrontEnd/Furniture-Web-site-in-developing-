@@ -1,0 +1,39 @@
+@media screen and (max-width: 1024px) {
+    .header {
+        .header_inner {
+            nav {
+                section {
+                    .logo {
+                        font-size: 26px !important;
+                    }
+                    .links {
+                        li {
+                            &::after {
+                                bottom: -24px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .header {
+        .header_inner {
+            nav {
+                section {
+                    .logo {
+                        font-size: 26px !important;
+                    }
+                    .links {
+                        display: none !important;
+                    }
+                }
+                .controls {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

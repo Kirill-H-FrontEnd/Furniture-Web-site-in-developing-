@@ -1,9 +1,14 @@
 import { FC } from "react";
+import Hero from "./components/Hero/Hero";
 
 interface IHome {}
 
 const HomePage: FC = ({}) => {
-  return <section className=""></section>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default HomePage;

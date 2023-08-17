@@ -1,0 +1,24 @@
+@tailwind base;
+// @tailwind components;
+@tailwind utilities;
+
+html {
+    .swiper-pagination-bullet {
+        background-color: #346751;
+        width: 12px;
+        height: 12px;
+    }
+    body {
+        .container {
+            width: min(100% - 20px, 1340px);
+            margin-inline: auto;
+        }
+        #wrapper {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+        main {
+        }
+    }
+}
