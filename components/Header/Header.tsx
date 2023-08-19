@@ -3,7 +3,7 @@
 // Styles
 import s from "./Header.module.scss";
 // React
-import { FC, useState } from "react";
+import { FC, useContext, useState } from "react";
 // Icons
 import { BsFillBasket2Fill } from "react-icons/bs";
 import { RiSearchLine } from "react-icons/ri";
@@ -11,12 +11,12 @@ import { PiCopyright } from "react-icons/pi";
 // Components
 import InfoBar from "@/components/InfoBar/InfoBar";
 import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
-import ToggleMenu from "@/components/ToggleMenu/ToggleMenu";
 // Next
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 // Font
 import { Open_Sans } from "next/font/google";
+import { useHeaderContext } from "@/providers/headerContext";
 
 const font = Open_Sans({
   subsets: ["latin"],
@@ -25,7 +25,8 @@ const font = Open_Sans({
 interface IHeader {}
 
 const Header: FC = ({}) => {
-  const [isBurger, setBurger] = useState(false);
+  // const [isBurger, setBurger] = useState(false);
+  const { isBurger, setBurger } = useContext(useHeaderContext);
   const pathPage = usePathname();
 
   const DATA_LINKS = [
@@ -90,7 +91,6 @@ const Header: FC = ({}) => {
           </nav>
         </section>
       </div>
-      <ToggleMenu />
     </header>
   );
 };

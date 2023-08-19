@@ -7,9 +7,10 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import CookieModal from "@/components/CookieModal/CookieModal";
+import ToggleMenu from "@/components/ToggleMenu/ToggleMenu";
 // Font
 import { Open_Sans } from "next/font/google";
-import ToggleMenu from "@/components/ToggleMenu/ToggleMenu";
+import HeaderContext from "@/providers/headerContext";
 
 const font_text = Open_Sans({
   subsets: ["latin"],
@@ -29,10 +30,13 @@ export default function RootLayout({
     <html lang="en" className="" style={font_text.style}>
       <body className="">
         <div id="wrapper">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <CookieModal />
+          <HeaderContext>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <CookieModal />
+            <ToggleMenu />
+          </HeaderContext>
         </div>
       </body>
     </html>

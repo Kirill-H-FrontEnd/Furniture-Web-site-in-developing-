@@ -2,7 +2,7 @@
 // Styles
 import s from "./BurgerMenu.module.scss";
 // React
-import { Dispatch, FC, SetStateAction } from "react";
+import { Dispatch, FC, SetStateAction, useContext } from "react";
 
 interface IBurgerMenu {
   active: boolean;
