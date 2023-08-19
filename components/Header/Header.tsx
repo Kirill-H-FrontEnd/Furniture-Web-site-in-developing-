@@ -1,19 +1,23 @@
 "use client";
+
 // Styles
 import s from "./Header.module.scss";
 // React
-import { FC } from "react";
+import { FC, useState } from "react";
 // Icons
 import { BsFillBasket2Fill } from "react-icons/bs";
 import { RiSearchLine } from "react-icons/ri";
 import { PiCopyright } from "react-icons/pi";
 // Components
 import InfoBar from "@/components/InfoBar/InfoBar";
+import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
+import ToggleMenu from "@/components/ToggleMenu/ToggleMenu";
 // Next
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 // Font
 import { Open_Sans } from "next/font/google";
+
 const font = Open_Sans({
   subsets: ["latin"],
   weight: ["700"],
@@ -21,6 +25,7 @@ const font = Open_Sans({
 interface IHeader {}
 
 const Header: FC = ({}) => {
+  const [isBurger, setBurger] = useState(false);
   const pathPage = usePathname();
 
   const DATA_LINKS = [
@@ -30,14 +35,13 @@ const Header: FC = ({}) => {
     { value: "Blog", href: "/blog" },
     { value: "Contacts Us", href: "/contacts" },
   ];
-
   return (
     <header className={`${s.header} bg-black shadow-lg shadow-black/20`}>
       <InfoBar />
       <div className="container">
         <section className={s.header_inner}>
           <nav className={`${s.nav} text-white `}>
-            <section>
+            <section className={s.header_nav}>
               <Link href={"/"} className={s.logo}>
                 <span style={font.style}>
                   Furniture <PiCopyright />
@@ -82,9 +86,11 @@ const Header: FC = ({}) => {
                 </Link>
               </div>
             </div>
+            <BurgerMenu active={isBurger} setActive={setBurger} />
           </nav>
         </section>
       </div>
+      <ToggleMenu />
     </header>
   );
 };

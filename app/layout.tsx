@@ -1,4 +1,7 @@
+// Styles
+
 import "./styles/globals.scss";
+// Next
 import type { Metadata } from "next";
 // Components
 import Footer from "@/components/Footer/Footer";
@@ -6,6 +9,8 @@ import Header from "@/components/Header/Header";
 import CookieModal from "@/components/CookieModal/CookieModal";
 // Font
 import { Open_Sans } from "next/font/google";
+import ToggleMenu from "@/components/ToggleMenu/ToggleMenu";
+
 const font_text = Open_Sans({
   subsets: ["latin"],
   weight: ["400"],
