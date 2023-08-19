@@ -1,3 +1,4 @@
+"use client";
 // Next
 import Link from "next/link";
 // React
