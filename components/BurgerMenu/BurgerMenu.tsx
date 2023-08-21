@@ -2,7 +2,7 @@
 // Styles
 import s from "./BurgerMenu.module.scss";
 // React
-import { Dispatch, FC, SetStateAction, useContext } from "react";
+import { Dispatch, FC, SetStateAction, useContext, useEffect } from "react";
 
 interface IBurgerMenu {
   active: boolean;
@@ -10,12 +10,14 @@ interface IBurgerMenu {
 }
 
 const BurgerMenu: FC<IBurgerMenu> = ({ active, setActive }) => {
-  // Add hide class for body
-  if (active) {
-    document.querySelector("body")?.classList.add("hide");
-  } else {
-    document.querySelector("body")?.classList.remove("hide");
-  }
+  useEffect(() => {
+    // Add hide class for body
+    if (active) {
+      document.querySelector("body")?.classList.add("hide");
+    } else {
+      document.querySelector("body")?.classList.remove("hide");
+    }
+  }, [active]);
   return (
     <div
       onClick={() => {
