@@ -2,9 +2,9 @@
     width: 100vw;
     height: 100dvh;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
-    z-index: 100;
+    z-index: 200;
     visibility: hidden;
     opacity: 0;
     overflow: hidden;
@@ -21,5 +21,60 @@
         width: 300px;
         height: 100%;
         transform: translate(-300px, 0px);
+        box-shadow: 0px 0px 6px rgba($color: #346751, $alpha: 0.6);
+        .logo {
+            padding: 11px 5px 11px 5px;
+            border-bottom: 2px solid #346751;
+            span {
+                position: relative;
+                font-size: 24px;
+                font-weight: 700;
+                svg {
+                    position: absolute;
+                    bottom: 7px;
+                    right: -10px;
+                    font-size: 8px;
+                }
+            }
+        }
+        .accordion {
+            font-weight: 500;
+            .title {
+                text-transform: uppercase;
+                padding: 5px 0px;
+            }
+            .indicator {
+                font-size: 18px;
+            }
+            .startContent {
+                font-size: 20px;
+            }
+            .content {
+                display: grid;
+                grid-row-gap: 10px;
+                a {
+                    font-size: 14px;
+                    position: relative;
+                    padding-left: 10px;
+                    &.active {
+                        text-decoration: underline;
+                        &::after {
+                            background-color: rgba($color: #346751, $alpha: 1);
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translate(-0%, -50%);
+                        width: 5px;
+                        height: 5px;
+                        background-color: rgba($color: #346751, $alpha: 0.5);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
     }
 }

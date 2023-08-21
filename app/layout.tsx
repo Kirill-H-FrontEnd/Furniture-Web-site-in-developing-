@@ -32,11 +32,11 @@ export default function RootLayout({
         <div id="wrapper">
           <HeaderContext>
             <Header />
-            <main>{children}</main>
-            <Footer />
-            <CookieModal />
             <ToggleMenu />
           </HeaderContext>
+          <main>{children}</main>
+          <Footer />
+          <CookieModal />
         </div>
       </body>
     </html>

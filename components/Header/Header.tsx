@@ -3,7 +3,7 @@
 // Styles
 import s from "./Header.module.scss";
 // React
-import { FC, useContext, useState } from "react";
+import { FC, useContext } from "react";
 // Icons
 import { BsFillBasket2Fill } from "react-icons/bs";
 import { RiSearchLine } from "react-icons/ri";
@@ -14,10 +14,10 @@ import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
 // Next
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+// Context
+import { useHeaderContext } from "@/providers/headerContext";
 // Font
 import { Open_Sans } from "next/font/google";
-import { useHeaderContext } from "@/providers/headerContext";
-
 const font = Open_Sans({
   subsets: ["latin"],
   weight: ["700"],
