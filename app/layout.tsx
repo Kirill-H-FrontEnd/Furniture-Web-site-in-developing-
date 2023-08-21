@@ -36,7 +36,6 @@ export default function RootLayout({
           </HeaderContext>
           <main>{children}</main>
           <Footer />
-          <CookieModal />
         </div>
       </body>
     </html>

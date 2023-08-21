@@ -9,6 +9,10 @@ html {
         height: 12px;
     }
     body {
+        &.hide {
+            overflow: hidden;
+        }
+        overflow-x: hidden;
         .container {
             width: min(100% - 20px, 1340px);
             margin-inline: auto;

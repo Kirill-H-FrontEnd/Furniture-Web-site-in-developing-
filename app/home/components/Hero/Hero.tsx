@@ -16,7 +16,6 @@ import Image from "next/image";
 import Link from "next/link";
 // Font
 import { Open_Sans } from "next/font/google";
-
 const font = Open_Sans({
   subsets: ["latin"],
   weight: ["500", "600", "700"],

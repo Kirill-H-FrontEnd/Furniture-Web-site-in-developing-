@@ -10,9 +10,17 @@ interface IBurgerMenu {
 }
 
 const BurgerMenu: FC<IBurgerMenu> = ({ active, setActive }) => {
+  // Add hide class for body
+  if (active) {
+    document.querySelector("body")?.classList.add("hide");
+  } else {
+    document.querySelector("body")?.classList.remove("hide");
+  }
   return (
     <div
-      onClick={() => setActive(!active)}
+      onClick={() => {
+        setActive(!active);
+      }}
       className={`${s.burgerMenu} ${active ? s.active : ""}`}
     >
       <span className="bg-white"></span>
