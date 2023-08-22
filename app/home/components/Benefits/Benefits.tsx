@@ -20,22 +20,22 @@ const Benefits: FC = ({}) => {
     {
       icon: <GiWallet />,
       title: "Easy Payment",
-      text: "    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis sunt ea cum esse! Ducimus aliquid eos, sit et quos molestias?",
+      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum totam autem, expedita distinctio repellat voluptatum atque nihil esse ea incidunt, a velit ut cupiditate amet voluptatibus animi saepe officiis nam.",
     },
     {
       icon: <BiSolidOffer />,
       title: "Promo Offers",
-      text: "    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis sunt ea cum esse! Ducimus aliquid eos, sit et quos molestias?",
+      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum totam autem, expedita distinctio repellat voluptatum atque nihil esse ea incidunt, a velit ut cupiditate amet voluptatibus animi saepe officiis nam.",
     },
     {
       icon: <TbTruckDelivery />,
       title: "Free Delivery",
-      text: "    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis sunt ea cum esse! Ducimus aliquid eos, sit et quos molestias?",
+      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum totam autem, expedita distinctio repellat voluptatum atque nihil esse ea incidunt, a velit ut cupiditate amet voluptatibus animi saepe officiis nam.",
     },
     {
       icon: <IoMdCube />,
       title: "Easy Return",
-      text: "    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis sunt ea cum esse! Ducimus aliquid eos, sit et quos molestias?",
+      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum totam autem, expedita distinctio repellat voluptatum atque nihil esse ea incidunt, a velit ut cupiditate amet voluptatibus animi saepe officiis nam.",
     },
   ];
   return (

@@ -50,6 +50,9 @@ const Hero: FC = ({}) => {
   ];
   return (
     <section className={`${s.hero} bg-white_bg`}>
+      <div style={font.style} className={`${s.sticker} bg-green text-white`}>
+        Explore Now
+      </div>
       <div className="container">
         <section className={s.hero_inner}>
           <section className={s.hero_content}>
@@ -108,7 +111,12 @@ const Hero: FC = ({}) => {
               {DATA_SWIPER_CARDS.map((slide, i) => (
                 <SwiperSlide className={s.swiper_slide} key={i}>
                   <div className={s.slide_image}>
-                    <Image src={slide.image} alt="" width={400} height={400} />
+                    <Image
+                      src={slide.image}
+                      alt={slide.title}
+                      width={400}
+                      height={400}
+                    />
                   </div>
                   <div className={s.slider_info}>
                     <h5 style={font.style} className="text-black_secondary">
