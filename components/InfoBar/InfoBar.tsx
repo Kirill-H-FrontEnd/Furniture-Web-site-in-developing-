@@ -17,15 +17,8 @@ const font = Open_Sans({
 interface IInfoBar {}
 
 const InfoBar: FC = ({}) => {
-  // useEffect(() => {
-  //   const statusInfoBar = sessionStorage.getItem("infoBar");
-  // }, [])
-  const [isInfoBar, setInfoBar] = useState(!sessionStorage.getItem("infoBar"));
-
-  // Close bar
-  const CloseBar = () => {
-    setInfoBar(false);
-  };
+  const STATUS = typeof sessionStorage.getItem("infoBar");
+  const [isInfoBar, setInfoBar] = useState(!STATUS);
   useEffect(() => {
     sessionStorage.setItem("infoBar", JSON.stringify(isInfoBar));
   }, []);
@@ -51,7 +44,7 @@ const InfoBar: FC = ({}) => {
                   </Link>
                 </p>
               </div>
-              <button onClick={() => CloseBar()}>
+              <button onClick={() => setInfoBar(false)}>
                 <p className="text-black ">
                   {" "}
                   <IoClose />
