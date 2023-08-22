@@ -2,7 +2,7 @@
 // Next
 import Link from "next/link";
 // React
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 // Styles
 import s from "./InfoBar.module.scss";
 // Icons
@@ -17,16 +17,19 @@ const font = Open_Sans({
 interface IInfoBar {}
 
 const InfoBar: FC = ({}) => {
-  // const statusInfoBar = sessionStorage.getItem("infoBar");
-  // const [isInfoBar, setInfoBar] = useState(!statusInfoBar);
-  // // Close bar
-  // const CloseBar = () => {
-  //   setInfoBar(false);
-  //   sessionStorage.setItem("infoBar", JSON.stringify(isInfoBar));
-  // };
+  const statusInfoBar = sessionStorage.getItem("infoBar");
+  const [isInfoBar, setInfoBar] = useState(!statusInfoBar);
+  // Close bar
+  const CloseBar = () => {
+    setInfoBar(false);
+  };
+  useEffect(() => {
+    sessionStorage.setItem("infoBar", JSON.stringify(isInfoBar));
+  }, []);
+
   return (
     <>
-      {/* {isInfoBar === true && (
+      {isInfoBar === true && (
         <section className={`${s.infoBar} bg-white text-black`}>
           <div className="container">
             <section style={font.style} className={s.infoBar_inner}>
@@ -45,7 +48,7 @@ const InfoBar: FC = ({}) => {
                   </Link>
                 </p>
               </div>
-              <button onClick={CloseBar}>
+              <button onClick={() => CloseBar()}>
                 <p className="text-black ">
                   {" "}
                   <IoClose />
@@ -54,8 +57,8 @@ const InfoBar: FC = ({}) => {
             </section>
           </div>
         </section>
-      )} */}
-      <section className={`${s.infoBar} bg-white text-black`}>
+      )}
+      {/* <section className={`${s.infoBar} bg-white text-black`}>
         <div className="container">
           <section style={font.style} className={s.infoBar_inner}>
             <div>
@@ -83,7 +86,7 @@ const InfoBar: FC = ({}) => {
             </button>
           </section>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
