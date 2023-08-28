@@ -1,6 +1,7 @@
 "use client";
 // Next
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 // Accordion
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 // Context
@@ -18,13 +19,7 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import s from "./ToggleMenu.module.scss";
 // React
 import { FC, useContext } from "react";
-// Font
-import { Open_Sans } from "next/font/google";
-import Link from "next/link";
-const font = Open_Sans({
-  subsets: ["latin"],
-  weight: ["500", "700"],
-});
+
 interface IToggleMenu {}
 
 const ToggleMenu: FC = ({}) => {
@@ -94,7 +89,7 @@ const ToggleMenu: FC = ({}) => {
         className={`${s.toggleMenu_nav} bg-white`}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className={`${s.logo} text-green`} style={font.style}>
+        <div className={`${s.logo} text-green`}>
           <span>
             {" "}
             Furniture <PiCopyright />
@@ -112,7 +107,7 @@ const ToggleMenu: FC = ({}) => {
         >
           {DATA_LINKS.map((item, i) => (
             <AccordionItem
-              className={`${font.className} text-green`}
+              className="text-green"
               startContent={item.icon}
               key={i}
               title={item.title}

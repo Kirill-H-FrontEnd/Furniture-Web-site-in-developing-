@@ -7,12 +7,7 @@ import { GiWallet } from "react-icons/gi";
 import { BiSolidOffer } from "react-icons/bi";
 import { TbTruckDelivery } from "react-icons/tb";
 import { IoMdCube } from "react-icons/io";
-// Font
-import { Open_Sans } from "next/font/google";
-const font = Open_Sans({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
+
 interface IBenefits {}
 
 const Benefits: FC = ({}) => {
@@ -43,10 +38,8 @@ const Benefits: FC = ({}) => {
       <div className="container">
         <section className={s.inner}>
           <section className={s.header}>
-            <h3 style={font.style} className="text-green">
-              Benefits
-            </h3>
-            <h2 style={font.style} className="text-black_secondary">
+            <h3 className="text-green">Benefits</h3>
+            <h2 className="text-black_secondary">
               {" "}
               What Makes Us the Preferred Choice?
             </h2>
@@ -55,9 +48,7 @@ const Benefits: FC = ({}) => {
             {DATA_CARDS.map((card, i) => (
               <article key={i} className={`${s.card} bg-white_bg`}>
                 <div className="bg-white">{card.icon}</div>
-                <h4 style={font.style} className="text-black_secondary">
-                  {card.title}
-                </h4>
+                <h4 className="text-black_secondary">{card.title}</h4>
                 <p className="text-gray">{card.text}</p>
               </article>
             ))}

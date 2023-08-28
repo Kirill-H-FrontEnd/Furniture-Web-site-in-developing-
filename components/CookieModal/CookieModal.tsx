@@ -5,12 +5,6 @@ import { FC, useState } from "react";
 import s from "./CookieModal.module.scss";
 // Next
 import Link from "next/link";
-// Font
-import { Open_Sans } from "next/font/google";
-const font = Open_Sans({
-  subsets: ["latin"],
-  weight: ["500"],
-});
 interface ICookieModal {}
 
 const CookieModal: FC = ({}) => {
@@ -53,10 +47,9 @@ const CookieModal: FC = ({}) => {
       <section className={`${s.cookieModal} bg-white text-green`}>
         <div className="container">
           <section>
-            <p style={font.style}>
+            <p>
               This site uses cookies for your convenience.
               <Link
-                style={font.style}
                 className="text-black "
                 target="_blank"
                 href={"https://policies.google.com/technologies/cookies"}
@@ -67,7 +60,7 @@ const CookieModal: FC = ({}) => {
             <div>
               <button
                 // onClick={CloseModal}
-                style={font.style}
+
                 className="bg-green text-white hover:bg-black hover:text-white"
               >
                 Ok, got it

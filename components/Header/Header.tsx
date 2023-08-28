@@ -16,16 +16,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 // Context
 import { useHeaderContext } from "@/providers/headerContext";
-// Font
-import { Open_Sans } from "next/font/google";
-const font = Open_Sans({
-  subsets: ["latin"],
-  weight: ["700"],
-});
+
 interface IHeader {}
 
 const Header: FC = ({}) => {
-  // const [isBurger, setBurger] = useState(false);
   const { isBurger, setBurger } = useContext(useHeaderContext);
   const pathPage = usePathname();
 
@@ -44,7 +38,7 @@ const Header: FC = ({}) => {
           <nav className={`${s.nav} text-white `}>
             <section className={s.header_nav}>
               <Link href={"/"} className={s.logo}>
-                <span style={font.style}>
+                <span>
                   Furniture <PiCopyright />
                 </span>
               </Link>

@@ -14,12 +14,7 @@ import { BsPlayFill, BsArrowUpRightCircleFill } from "react-icons/bs";
 // Next
 import Image from "next/image";
 import Link from "next/link";
-// Font
-import { Open_Sans } from "next/font/google";
-const font = Open_Sans({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
+
 interface IHero {}
 
 const Hero: FC = ({}) => {
@@ -50,9 +45,7 @@ const Hero: FC = ({}) => {
   ];
   return (
     <section className={`${s.hero} bg-white_bg`}>
-      <div style={font.style} className={`${s.sticker} bg-green text-white`}>
-        Explore Now
-      </div>
+      <div className={`${s.sticker} bg-green text-white`}>Explore Now</div>
       <div className="container">
         <section className={s.hero_inner}>
           <section className={s.hero_content}>
@@ -60,13 +53,13 @@ const Hero: FC = ({}) => {
               <p className="text-green ">
                 <FaMicrophoneAlt />
               </p>
-              <p style={font.style}>
+              <p>
                 Award Winning <span className="text-green">Furniture</span>{" "}
                 Store
               </p>
             </div>
             <div className={s.info}>
-              <h1 style={font.style} className="text-black_secondary">
+              <h1 className="text-black_secondary">
                 Make Your Interior Minimalist{" "}
                 <span className="text-green">&</span> Modern
               </h1>
@@ -77,10 +70,7 @@ const Hero: FC = ({}) => {
             </div>
             <div className={s.buttons}>
               <div>
-                <button
-                  style={font.style}
-                  className="bg-green text-white hover:bg-white hover:text-green"
-                >
+                <button className="bg-green text-white hover:bg-white hover:text-green">
                   Get Started
                 </button>
               </div>
@@ -88,13 +78,13 @@ const Hero: FC = ({}) => {
                 <button className="text-black bg-white  ">
                   <BsPlayFill />
                 </button>
-                <p style={font.style}>Watch Video</p>
+                <p>Watch Video</p>
               </div>
             </div>
             <div className={s.statistics}>
               {DATA_STATISTICS.map((item, i) => (
                 <div key={i}>
-                  <h5 style={font.style}>{item.value}</h5>
+                  <h5>{item.value}</h5>
                   <p className="text-gray">{item.title}</p>
                 </div>
               ))}
@@ -119,9 +109,7 @@ const Hero: FC = ({}) => {
                     />
                   </div>
                   <div className={s.slider_info}>
-                    <h5 style={font.style} className="text-black_secondary">
-                      {slide.title}
-                    </h5>
+                    <h5 className="text-black_secondary">{slide.title}</h5>
                     <p className="text-gray">{slide.value} Items</p>
                     <Link href={slide.href}>
                       <p

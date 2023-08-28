@@ -2,16 +2,11 @@
 import { FC } from "react";
 // Styles
 import s from "./Category.module.scss";
-// Font
-import { Open_Sans } from "next/font/google";
 // Icons
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 // Next
 import Link from "next/link";
-const font = Open_Sans({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
+
 interface ICategory {}
 
 const Category: FC = ({}) => {
@@ -46,10 +41,8 @@ const Category: FC = ({}) => {
       <div className="container">
         <section className={s.inner}>
           <section className={s.header}>
-            <h3 style={font.style} className="text-green">
-              Category
-            </h3>
-            <h2 style={font.style} className="text-black_secondary">
+            <h3 className="text-green">Category</h3>
+            <h2 className="text-black_secondary">
               Discover Our Unique Collection of Exclusive Categories.
             </h2>
           </section>

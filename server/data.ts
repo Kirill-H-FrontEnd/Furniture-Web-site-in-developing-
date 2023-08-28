@@ -1,0 +1,276 @@
+export const DATA = [
+  {
+    title: "All",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+  {
+    title: "Chairs",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+  {
+    title: "Tables",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+  {
+    title: "Sofas",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+  {
+    title: "Beds",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+  {
+    title: "Lamps",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+  {
+    title: "Chimneys",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+  {
+    title: "Storage",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+  {
+    title: "Kitchen",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+  {
+    title: "Gardening",
+    cards: [
+      {
+        image: "/Images/bestSeller/chair.png",
+        value: "Arm Chair",
+        category: "Living Room",
+        prise: "250.00",
+        rating: "4.8",
+      },
+    ],
+  },
+];

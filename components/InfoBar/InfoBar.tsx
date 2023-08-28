@@ -8,24 +8,18 @@ import s from "./InfoBar.module.scss";
 // Icons
 import { IoClose } from "react-icons/io5";
 import { BiSupport } from "react-icons/bi";
-// Font
-import { Open_Sans } from "next/font/google";
-const font = Open_Sans({
-  subsets: ["latin"],
-  weight: ["500"],
-});
 interface IInfoBar {}
 
 const InfoBar: FC = ({}) => {
-  const STATUS = typeof sessionStorage.getItem("infoBar");
-  const [isInfoBar, setInfoBar] = useState(!STATUS);
-  useEffect(() => {
-    sessionStorage.setItem("infoBar", JSON.stringify(isInfoBar));
-  }, []);
+  // const STATUS = sessionStorage.getItem("infoBar");
+  // const [isInfoBar, setInfoBar] = useState(!STATUS);
+  // useEffect(() => {
+  //   sessionStorage.setItem("infoBar", JSON.stringify(isInfoBar));
+  // }, []);
 
   return (
     <>
-      {isInfoBar === true && (
+      {/* {isInfoBar === true && (
         <section className={`${s.infoBar} bg-white text-black`}>
           <div className="container">
             <section style={font.style} className={s.infoBar_inner}>
@@ -53,10 +47,10 @@ const InfoBar: FC = ({}) => {
             </section>
           </div>
         </section>
-      )}
-      {/* <section className={`${s.infoBar} bg-white text-black`}>
+      )} */}
+      <section className={`${s.infoBar} bg-white text-black`}>
         <div className="container">
-          <section style={font.style} className={s.infoBar_inner}>
+          <section className={s.infoBar_inner}>
             <div>
               <p className="text-green">
                 <BiSupport />
@@ -82,7 +76,7 @@ const InfoBar: FC = ({}) => {
             </button>
           </section>
         </div>
-      </section> */}
+      </section>
     </>
   );
 };
