@@ -16,6 +16,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 // Context
 import { useHeaderContext } from "@/providers/headerContext";
+import Image from "next/image";
 
 interface IHeader {}
 

@@ -59,6 +59,11 @@ const BestSeller: FC = ({}) => {
                 </Tab>
               ))}
             </Tabs>
+            <div className={s.button}>
+              <button className="bg-green text-white hover:bg-white hover:text-green">
+                View All Collection
+              </button>
+            </div>
           </section>
         </section>
       </div>
