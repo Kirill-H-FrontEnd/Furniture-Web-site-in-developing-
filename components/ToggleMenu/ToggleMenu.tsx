@@ -96,6 +96,8 @@ const ToggleMenu: FC = ({}) => {
           </span>
         </div>
         <Accordion
+          variant="splitted"
+          className={s.acc_wrapper}
           isCompact
           itemClasses={{
             base: s.accordion,

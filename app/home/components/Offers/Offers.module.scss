@@ -1,0 +1,118 @@
+.offers {
+    .inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        .images {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-column-gap: 20px;
+            div {
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 0%;
+                    height: 0%;
+                    border: 2px solid rgba($color: #fff, $alpha: 0.5);
+                    border-radius: 7px;
+                }
+                &:nth-of-type(1) {
+                    &::before {
+                        border-radius: 0px 7px 7px 0px;
+                        width: 95%;
+                        height: 97%;
+                        left: 46%;
+                    }
+                    img {
+                        border-radius: 0px 10px 10px 0px;
+                    }
+                }
+                &:nth-of-type(2) {
+                    &::before {
+                        width: 93%;
+                        height: 97%;
+                    }
+                }
+                &:nth-of-type(3) {
+                    &::before {
+                        width: 96%;
+                        height: 97%;
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 600px;
+                    border-radius: 10px;
+                    object-fit: fill;
+                }
+            }
+        }
+        .content {
+            position: relative;
+            display: grid;
+            place-items: center;
+            padding: 40px;
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                backdrop-filter: blur(3px);
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                border-radius: 10px 0px 0px 10px;
+                z-index: 1;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                border-radius: 10px 0px 0px 10px;
+            }
+            article {
+                position: relative;
+                z-index: 2;
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                    &::before {
+                        content: "";
+                        width: 15px;
+                        height: 1px;
+                        display: inline-block;
+                        background-color: #346751;
+                        margin: 0px 5px 5px 0px;
+                    }
+                }
+                h2 {
+                    font-size: 50px;
+                    font-weight: 600;
+                    max-width: 800px;
+                    line-height: 1.2;
+                    margin-inline: auto;
+                }
+                p {
+                    margin: 20px 0px;
+                }
+                a {
+                    border-radius: 30px;
+                    padding: 10px 30px;
+                    transition: all 0.1s ease;
+                    box-shadow: 0px 2px 6px rgba(52, 103, 81, 0.1);
+                }
+            }
+        }
+    }
+}
+// ! Media
+@import "./OffersMedia.scss";

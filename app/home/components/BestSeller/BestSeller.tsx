@@ -6,7 +6,7 @@ import { AiFillStar } from "react-icons/ai";
 import s from "./BestSeller.module.scss";
 import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 import { DATA } from "@/server/data";
-import Image from "next/image";
+
 interface IBestSeller {}
 
 const BestSeller: FC = ({}) => {

@@ -1,0 +1,40 @@
+@media screen and (max-width: 1024px) {
+    .offers {
+        .inner {
+            grid-template-columns: 1fr;
+            .images {
+                display: none;
+            }
+            .content {
+                padding: 80px 40px;
+                &::after {
+                    border-radius: 0px 0px 0px 0px;
+                }
+                article {
+                    text-align: center;
+                    h2 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .offers {
+        .inner {
+            .content {
+                article {
+                    h3 {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    h2 {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

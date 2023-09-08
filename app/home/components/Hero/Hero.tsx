@@ -1,13 +1,15 @@
 "use client";
 // Slider
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay, Mousewheel } from "swiper/modules";
 import "swiper/scss";
-import "swiper/scss/pagination";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-creative";
 // Styles
 import s from "./Hero.module.scss";
 // React
-import { FC } from "react";
+import { FC, SetStateAction, useEffect, useState } from "react";
 // Icons
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { BsPlayFill, BsArrowUpRightCircleFill } from "react-icons/bs";
@@ -18,6 +20,16 @@ import Link from "next/link";
 interface IHero {}
 
 const Hero: FC = ({}) => {
+  // Add class 'visible' for sticker
+  const [isVisible, setVisible] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY != 0) {
+        setVisible(true);
+      }
+    });
+  }, [scrollY]);
+  // Data arrays
   const DATA_SWIPER_CARDS = [
     {
       image: "/Images/hero/LivingRoomBanner.jpg",
@@ -37,6 +49,12 @@ const Hero: FC = ({}) => {
       value: "350+",
       href: "",
     },
+    {
+      image: "/Images/hero/KitchenBanner.jpg",
+      title: "Kitchen ",
+      value: "350+",
+      href: "",
+    },
   ];
   const DATA_STATISTICS = [
     { value: "450+", title: "Collections" },
@@ -45,7 +63,13 @@ const Hero: FC = ({}) => {
   ];
   return (
     <section className={`${s.hero} bg-white_bg`}>
-      <div className={`${s.sticker} bg-green text-white`}>Explore Now</div>
+      <div
+        className={`${s.sticker} ${
+          isVisible ? s.visible : ""
+        } bg-green text-white`}
+      >
+        Explore Now
+      </div>
       <div className="container">
         <section className={s.hero_inner}>
           <section className={s.hero_content}>
@@ -92,11 +116,20 @@ const Hero: FC = ({}) => {
           </section>
           <section className={s.hero_swiper}>
             <Swiper
-              spaceBetween={30}
-              slidesPerView={1.3}
-              modules={[Pagination]}
+              direction={"vertical"}
+              grabCursor={true}
+              mousewheel={true}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
               className={s.swiper}
-              pagination={{ clickable: true }}
+              spaceBetween={20}
+              modules={[Pagination, Autoplay, Mousewheel]}
+              wrapperClass={s.swiper_wrapper}
             >
               {DATA_SWIPER_CARDS.map((slide, i) => (
                 <SwiperSlide className={s.swiper_slide} key={i}>

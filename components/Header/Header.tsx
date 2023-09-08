@@ -32,61 +32,63 @@ const Header: FC = ({}) => {
     { value: "Contacts Us", href: "/contacts" },
   ];
   return (
-    <header className={`${s.header} bg-black shadow-lg shadow-black/20`}>
-      <InfoBar />
-      <div className="container">
-        <section className={s.header_inner}>
-          <nav className={`${s.nav} text-white `}>
-            <section className={s.header_nav}>
-              <Link href={"/"} className={s.logo}>
-                <span>
-                  Furniture <PiCopyright />
-                </span>
-              </Link>
-              <ul className={s.links}>
-                {DATA_LINKS.map((link, i) => (
-                  <li
-                    key={i}
-                    className={pathPage === link.href ? s.active : ""}
-                  >
-                    <Link
-                      className={`${
-                        pathPage === link.href ? `${s.active} text-green` : ""
-                      } ${"hover:text-green"}`}
-                      href={link.href}
+    <>
+      <header className={`${s.header} bg-black `}>
+        <InfoBar />
+        <div className="container">
+          <section className={s.header_inner}>
+            <nav className={`${s.nav} text-white `}>
+              <section className={s.header_nav}>
+                <Link href={"/"} className={s.logo}>
+                  <span>
+                    Furniture <PiCopyright />
+                  </span>
+                </Link>
+                <ul className={s.links}>
+                  {DATA_LINKS.map((link, i) => (
+                    <li
+                      key={i}
+                      className={pathPage === link.href ? s.active : ""}
                     >
-                      {link.value}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-            <div className={s.controls}>
-              <div>
-                <p title="Search">
-                  <RiSearchLine />
-                </p>
-                <p title="Store basket">
-                  <BsFillBasket2Fill />
-                </p>
+                      <Link
+                        className={`${
+                          pathPage === link.href ? `${s.active} text-green` : ""
+                        } ${"hover:text-green"}`}
+                        href={link.href}
+                      >
+                        {link.value}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+              <div className={s.controls}>
+                <div>
+                  <p title="Search">
+                    <RiSearchLine />
+                  </p>
+                  <p title="Store basket">
+                    <BsFillBasket2Fill />
+                  </p>
+                </div>
+                <div>
+                  <Link className="hover:text-green" href={""}>
+                    Sign Up
+                  </Link>
+                  <Link
+                    className="bg-green text-white hover:bg-white hover:text-green"
+                    href={""}
+                  >
+                    Sign In
+                  </Link>
+                </div>
               </div>
-              <div>
-                <Link className="hover:text-green" href={""}>
-                  Sign Up
-                </Link>
-                <Link
-                  className="bg-green text-white hover:bg-white hover:text-green"
-                  href={""}
-                >
-                  Sign In
-                </Link>
-              </div>
-            </div>
-            <BurgerMenu active={isBurger} setActive={setBurger} />
-          </nav>
-        </section>
-      </div>
-    </header>
+              <BurgerMenu active={isBurger} setActive={setBurger} />
+            </nav>
+          </section>
+        </div>
+      </header>
+    </>
   );
 };
 

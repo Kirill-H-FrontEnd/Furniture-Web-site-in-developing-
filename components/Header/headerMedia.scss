@@ -9,7 +9,7 @@
                     .links {
                         li {
                             &::after {
-                                bottom: -24px !important;
+                                bottom: -20px !important;
                             }
                         }
                     }
@@ -21,10 +21,11 @@
 @media screen and (max-width: 900px) {
     .header {
         .header_inner {
-            nav {
+            .nav {
+                padding: 8px 0px;
                 section {
                     .logo {
-                        font-size: 24px !important;
+                        font-size: 22px !important;
                     }
                     .links {
                         display: none !important;
