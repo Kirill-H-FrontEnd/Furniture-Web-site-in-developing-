@@ -28,7 +28,7 @@ const Hero: FC = ({}) => {
         setVisible(true);
       }
     });
-  }, [window.scrollY]);
+  }, []);
   // Data arrays
   const DATA_SWIPER_CARDS = [
     {
