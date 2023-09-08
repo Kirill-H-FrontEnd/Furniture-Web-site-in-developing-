@@ -24,11 +24,11 @@ const Hero: FC = ({}) => {
   const [isVisible, setVisible] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (scrollY != 0) {
+      if (window.scrollY != 0) {
         setVisible(true);
       }
     });
-  }, [scrollY]);
+  }, [window.scrollY]);
   // Data arrays
   const DATA_SWIPER_CARDS = [
     {
