@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        404: "250px",
+      },
       colors: {
         black: "#272727",
         black_secondary: "#000",

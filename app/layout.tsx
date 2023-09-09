@@ -7,14 +7,15 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import CookieModal from "@/components/CookieModal/CookieModal";
 import ToggleMenu from "@/components/ToggleMenu/ToggleMenu";
+// Providers
+import HeaderContext from "@/providers/headerContext";
 // Font
 import { Open_Sans } from "next/font/google";
-import HeaderContext from "@/providers/headerContext";
-
 const font_text = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+
 export const metadata: Metadata = {
   title: "Furniture | Home",
   description: "This is home page",
