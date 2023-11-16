@@ -1,1 +1,2 @@
-# Furniture-Website | NextJs |Type-Script | Tailwind
+# Furniture | Web-site (in developing)
+# NextJs |Type-Script | Tailwind | SCSS
